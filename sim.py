@@ -80,7 +80,7 @@ if __name__ == "__main__":
     from modules.indCountyBenefits import indCountyBenefits
 
     providers = ['VERIZON', 'AT_T', 'T_MOBILE', 'SPRINT']
-    pair_combinations = combinations(providers,2)
+    pair_combinations = list(combinations(providers,2))
     modes = ["Peering", "Roaming"]
     
     stateID = sys.argv[1]
@@ -90,11 +90,13 @@ if __name__ == "__main__":
 
     # sys.exit(0)
     ###
+    
     print("Setting up...")
     indCountyBenefits(state, pair_combinations)
+    
     ###
     runSimulator(stateID, customers, "No Peering") # Mode: No Peering
-
+    
     for mode in modes:
         for pair in pair_combinations:
             

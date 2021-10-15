@@ -25,12 +25,12 @@ class State(object):
 		with open('Tower Data/county-boundaries.json') as f:
 			data = json.load(f)["features"]
 		
-		i = 30
+		# i = 30
 		for county in data:
 			
-			if (county["properties"]["STATE"] == self.id) and i > 0:
-				i -= 1
-			# if (county["properties"]["STATE"] == self.id):
+			# if (county["properties"]["STATE"] == self.id) and i > 0:
+				# i -= 1
+			if (county["properties"]["STATE"] == self.id):
 				myCounties[county["properties"]["COUNTY"]] = County(self, county["properties"]["COUNTY"])
 				
 
