@@ -22,7 +22,7 @@ def checkDataDirectories():
 def setTowerDataDirectories():
     import zipfile
 
-    DATA_URL = "https://ufile.io/uge8t5rw"
+    DATA_URL = "https://ufile.io/z5z96ieq"
     path = os. getcwd()
 
     while "Tower Data.zip" not in os.listdir(path):
